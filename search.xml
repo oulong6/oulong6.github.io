@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>let cont var</title>
+      <link href="/2020/06/02/let-cont-var/"/>
+      <url>/2020/06/02/let-cont-var/</url>
+      
+        <content type="html"><![CDATA[<h1 id="let和const命令"><a href="#let和const命令" class="headerlink" title="let和const命令"></a>let和const命令</h1><p>在ES6之前声明变量我们会用var关键字声明一个变量;用var声明变量只有全局作用域与函数作用域;没有块级作用域,并且用var声明变量会发生变量提升,也就是在变量声明位置之前可以使用变量;并且变量的初始值是undefined;</p><p>在ES6中新增了let与const命令用于声明变量;let与const声明的变量会有块级作用域,也就是在变量的块级作用域之外不能使用这个声明的变量,并且let和const声明的变量不会发生变量提升,在变量声明之前使用这个变量是会报错的(refrenceError),通过let和const声明变量会在这个这个作用域中形成暂时性死区,也就是不能再再次声明同名变量,并且变量名不能与函数参数名相同;</p><p>通过const声明的常量是不能再次改变的,使用在声明常量时就应该给常量赋值;如果常量是一个引用类型的值,那么可以改变这个类型的属性值的;const只是确保引用地址不变;const声明常量并不是变量值不能改动,而是变量指向的内存地址不得改变;</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> javascript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> js </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>git基础</title>
+      <link href="/2020/04/15/git-1/"/>
+      <url>/2020/04/15/git-1/</url>
+      
+        <content type="html"><![CDATA[<h2 id="初始化本地仓库"><a href="#初始化本地仓库" class="headerlink" title="初始化本地仓库"></a>初始化本地仓库</h2><p><strong>1.</strong>通过这个指令让git管理这个本地仓库</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">git init<br></code></pre></td></tr></table></figure><p><strong>2.</strong>或者通过克隆已存在的项目仓库来初始化本地仓库</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">git clone url<br></code></pre></td></tr></table></figure><h2 id="添加文件到仓库"><a href="#添加文件到仓库" class="headerlink" title="添加文件到仓库"></a>添加文件到仓库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">git add filename|.<br></code></pre></td></tr></table></figure><h2 id="撤销添加到暂存区的文件"><a href="#撤销添加到暂存区的文件" class="headerlink" title="撤销添加到暂存区的文件"></a>撤销添加到暂存区的文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">git reset HEAD &lt;filename&gt;<br></code></pre></td></tr></table></figure><h2 id="撤销变动的内容-还未添加如暂存区中"><a href="#撤销变动的内容-还未添加如暂存区中" class="headerlink" title="撤销变动的内容,还未添加如暂存区中"></a>撤销变动的内容,还未添加如暂存区中</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">git checkout -- &lt;filename&gt;<br></code></pre></td></tr></table></figure><h2 id="提交暂存区中的内容"><a href="#提交暂存区中的内容" class="headerlink" title="提交暂存区中的内容"></a>提交暂存区中的内容</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">git commit -m &#39;提交的信息&#39;<br></code></pre></td></tr></table></figure><h2 id="查看Git日志"><a href="#查看Git日志" class="headerlink" title="查看Git日志"></a>查看Git日志</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">git log<br></code></pre></td></tr></table></figure><h2 id="查看提交的commit信息一行显示"><a href="#查看提交的commit信息一行显示" class="headerlink" title="查看提交的commit信息一行显示"></a>查看提交的commit信息一行显示</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">git log --pretty&#x3D;oneline<br></code></pre></td></tr></table></figure><h2 id="用图形的方式查看"><a href="#用图形的方式查看" class="headerlink" title="用图形的方式查看"></a>用图形的方式查看</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs text">git log --graph<br></code></pre></td></tr></table></figure><h2 id="git-将暂存区中的文件撤销到工作区"><a href="#git-将暂存区中的文件撤销到工作区" class="headerlink" title="git 将暂存区中的文件撤销到工作区"></a>git 将暂存区中的文件撤销到工作区</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">git add x.txt<br>git reset HEAD x.txt<br></code></pre></td></tr></table></figure><h2 id="将已修改的文件恢复到最后commit时的状态"><a href="#将已修改的文件恢复到最后commit时的状态" class="headerlink" title="将已修改的文件恢复到最后commit时的状态"></a>将已修改的文件恢复到最后commit时的状态</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs text">git checkout -- &lt;filename&gt;<br>git checkout -- . 恢复工作区中的全部的修改到最后一次commit时的状态<br></code></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>css-a</title>
+      <link href="/2020/04/14/css-a-1/"/>
+      <url>/2020/04/14/css-a-1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="谈谈html与css的规范"><a href="#谈谈html与css的规范" class="headerlink" title="谈谈html与css的规范"></a>谈谈html与css的规范</h1><p><strong>1.</strong>在一些书上会看到</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-meta-keyword">html</span>&gt;</span><br></code></pre></td></tr></table></figure><p>他表示当前文档是HTML5的规范.表示浏览器要使用HTML5规定的方式解析和渲染页面.但是这里有一个错误..<br>DOCTYPE 不应该大写,大写可能会造成浏览器对HTML5的文档解析错误…有些书真是误人子弟!!正确的规范是</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!doctype <span class="hljs-meta-keyword">html</span>&gt;</span><br></code></pre></td></tr></table></figure><p>不信你看B站的页面<br><strong>2.</strong>在想要对IE做一些特殊的兼容处理时,带上下面这个标签</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">http-equiv</span>=<span class="hljs-string">"x-ua-compatible"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"IE=edge"</span>&gt;</span><br></code></pre></td></tr></table></figure><p>IE 支持通过特定的 <meta> 标签来确定绘制当前页面所应该采用的 IE 版本。除非有强烈的特殊需求，否则最好是设置为 edge mode，从而通知 IE 采用其所支持的最新的绘制模式。<br><strong>3.</strong>在html标签上最好带上lang属性指定当前网页的语言类型</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"zh-CN"</span>&gt;</span><br><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure><p>这个表示使用当前的网页语言是简体中文,如果是英文的话,lang=”en”<br><strong>4.</strong></p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>&gt;</span> <br> <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br></code></pre></td></tr></table></figure><p>这两个标签默认会带上自己的type类型,所以不用指定.link标签要带上rel属性表示他是一个css样式表<br><strong>5.</strong>在书写html标签时不要在自闭合的标签后面加上斜杠.</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!doctype <span class="hljs-meta-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"zh-CN"</span>&gt;</span><br>   <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>你最棒<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">""</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">""</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>  <br>  <span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure><p><strong>6.</strong>在标签缩进时最好用两个空格代替Tab建,因为Tab建进行缩进在不同的操作系统上的空格数量是不同的.<br>两个空格代替Tab建确保在每个系统上都是一致的<br><strong>7.</strong>标签中的属性顺序  </p><ol><li>class  </li><li>id</li><li>data-set  </li><li>style href type value  </li><li>title alt</li><li>role ,….  </li></ol><p><strong>7.</strong>在标签中当是boolean类型属性时只写属性名就行了如:</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">checked</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">disabled</span>&gt;</span><br></code></pre></td></tr></table></figure><h2 id="下面来说说css的一些编码规范"><a href="#下面来说说css的一些编码规范" class="headerlink" title="下面来说说css的一些编码规范"></a>下面来说说css的一些编码规范</h2><p>在css中书写属性时遵循下面的顺序<br>1.positioning<br>2.Box model<br>3.Typographic<br>4.visual<br>5.Misc<br>如:  </p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.box</span> &#123;<br>  <span class="hljs-comment">/*positioning*/</span><br>  <span class="hljs-attribute">position</span>: absolute;<br>  <span class="hljs-attribute">top</span>: <span class="hljs-number">0</span>;<br>  <span class="hljs-attribute">left</span>: <span class="hljs-number">0</span>;<br>  <span class="hljs-attribute">bottom</span>: <span class="hljs-number">0</span>;<br>  <span class="hljs-attribute">right</span>: <span class="hljs-number">0</span>;<br>  <span class="hljs-attribute">z-index</span>: <span class="hljs-number">99</span>;<br>  <span class="hljs-comment">/*box model*/</span><br>  <span class="hljs-attribute">display</span>: block;<br>  <span class="hljs-attribute">float</span>: left;<br>  <span class="hljs-attribute">width</span>: <span class="hljs-number">200px</span>;<br>  <span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>;<br>  <span class="hljs-comment">/*Typographic*/</span><br>  <span class="hljs-attribute">font-family</span>: <span class="hljs-string">"Helvetica Neue"</span>, Ubuntu, Helvetica, Arial, sans-serif;<br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">16px</span>;<br>  <span class="hljs-attribute">color</span>: <span class="hljs-number">#00aced</span>;<br>  <span class="hljs-attribute">text-align</span>: center;<br>  <span class="hljs-comment">/*visual*/</span><br>  <span class="hljs-attribute">background-color</span>: red;<br>  <span class="hljs-attribute">background-size</span>: cover;<br>  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid black;<br>  <span class="hljs-comment">/*misc*/</span><br>  <span class="hljs-attribute">opacity</span>: .<span class="hljs-number">8</span>;<br>&#125;<br></code></pre></td></tr></table></figure><p>为什么要这样呢!position将使元素脱离标准流,会覆盖标准流中的元素,box model将会影响元素的大小,显示模式.<br><strong>..__..</strong><br>在写颜色属性值时使用十六进制的形式.后三位会前三位相同要省略如:<br>color: #edfced;<br>在写属性时最后一个属性的机尾要带上分号<br>属性连写时,为好区分每一个,分开写  </p><pre><code class="css"><span class="selector-class">.box</span> {  <span class="attribute">border-bottom</span>: <span class="number">1px</span> solid red;  <span class="attribute">border-top</span>: <span class="number">1px</span> solid red;}</code></pre><p>在css中一个选择器只包含一个属性时,将们写在一行</p><pre><code class="css"><span class="selector-class">.box</span> {<span class="attribute">border-bottom</span>: <span class="number">1px</span> solid red;}</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> css </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>css布局</title>
+      <link href="/2020/04/13/css-a/"/>
+      <url>/2020/04/13/css-a/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"box"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></figure><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.box</span> &#123;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">400px</span>;<br>    <span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>;<br>    <span class="hljs-attribute">background-color</span>: lightblue;<br>    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto;<br>&#125;<br></code></pre></td></tr></table></figure><p>这段代码的确会当box居中显示.但是有一个不足的是当游览器的宽度小于400px时<br>浏览器会出现一个<strong>水平的滚动条</strong>!!!<br>怎么办!怎么办!</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-selector-class">.box</span> &#123;<br>    <span class="hljs-attribute">max-width</span>: <span class="hljs-number">400px</span>;<br>    <span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>;<br>    <span class="hljs-attribute">background-color</span>: lightblue;<br>    <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto;<br>&#125;<br></code></pre></td></tr></table></figure><p><strong>max-width:</strong>可以轻松解决问题,而且他支持傻逼的IE6+,IE7+……哈哈</p><h2 id="display-这个属性有多个值哎-难"><a href="#display-这个属性有多个值哎-难" class="headerlink" title="display 这个属性有多个值哎!难.."></a>display 这个属性有多个值哎!难..</h2><p><strong>display: none</strong><br>元素将不会显示,也不会占用空间.script标签就是它<br><strong>visibility:hidden</strong><br>元素也不会显示,但是会占有元素本来的大小空间</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> css </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>js中的作用域</title>
+      <link href="/2020/04/13/js/"/>
+      <url>/2020/04/13/js/</url>
+      
+        <content type="html"><![CDATA[<h1 id="js中的作用域"><a href="#js中的作用域" class="headerlink" title="js中的作用域"></a>js中的作用域</h1><p><strong>js常被称为动态,解释型语言,但是在<code>你所不知的javascript</code>一书中js其实是编译型语言</strong><br><strong>编译型语言通常包含以下几个步骤:</strong><br>1.代码先进行分词/词法分析<br>2.解析/语法分析(编译器将词法分析的词法单元生成一颗抽象语法树)<br>3.编译器将这一课抽象语法树通过编译生成代码,也就是一系列的机械指令</p><h2 id="编译器在编译代码时会与作用域相互作用"><a href="#编译器在编译代码时会与作用域相互作用" class="headerlink" title="编译器在编译代码时会与作用域相互作用"></a>编译器在编译代码时会与作用域相互作用</h2><p>如编译器在看到下面这段代码实时:</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">x</span>(<span class="hljs-params"></span>) </span>&#123;<br>    <span class="hljs-keyword">var</span> a = <span class="hljs-number">23</span>;<br>&#125;<br></code></pre></td></tr></table></figure><p>在函数x中看到var a时会让作用域分配一个变量标识符a的存储空间.</p><h2 id="要执行代码时会有js引擎-作用域-编译器相互协作"><a href="#要执行代码时会有js引擎-作用域-编译器相互协作" class="headerlink" title="要执行代码时会有js引擎,作用域,编译器相互协作"></a>要执行代码时会有js引擎,作用域,编译器相互协作</h2><p>如:</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">12</span>;<br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params">s</span>) </span>&#123;<br>  <span class="hljs-built_in">console</span>.log(a+s)<br>&#125;<br>f(<span class="hljs-number">23</span>);<br></code></pre></td></tr></table></figure><p>在执行这段代码时.引擎会与作用域有下列的对话:<br>引擎:嗨作用域我要f(rsh)右查询<br>作用域:我有f,它是一个函数,geini<br>引擎:哦原来是全局作用域大哥啊,好呢!我这就执行它.<br>引擎: f函数里的作用域我要s标识符,<br>f中的作用域: 我有s标识符.它是一个形参,给你.<br>引擎:好呢!我将23赋值个形参s<br>引擎: f函数的作用域我要console.log<br>f中的引擎: 找到了它是一个内置函数给你.<br>引擎: 好呢!我执行它,诶!我需要a<br>f中的引擎: 我没见过.走开<br>引擎:哟!脾气好坏哦!我去你的三层作用域中找.<br>引擎: f函数的上层作用域我要a变量.0_0是全局大哥啊<br>全局作用域: 呵呵!我有给你<br>引擎:全局大哥真棒!哟!..我还要s变量(右查询)<br>f函数的作用域:你不记得了它是形参啊.哎给你<br>引擎:哟!我哪里不记得了,我只是想确认一下..嘻嘻<br>(4次右查询,1次左查询)</p><h2 id="作用域是根据名称查询变量的一套规则"><a href="#作用域是根据名称查询变量的一套规则" class="headerlink" title="作用域是根据名称查询变量的一套规则!!!!"></a>作用域是根据名称查询变量的一套规则!!!!</h2><h2 id="无论函数在哪里被调用-也无论它如何被调用-它的词法作用域都只由函数被声明时所处的位置决定"><a href="#无论函数在哪里被调用-也无论它如何被调用-它的词法作用域都只由函数被声明时所处的位置决定" class="headerlink" title="无论函数在哪里被调用,也无论它如何被调用,它的词法作用域都只由函数被声明时所处的位置决定!!!"></a>无论函数在哪里被调用,也无论它如何被调用,它的词法作用域都只由函数被声明时所处的位置决定!!!</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> javascript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> js </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>js中的this</title>
+      <link href="/2020/04/12/js-this/"/>
+      <url>/2020/04/12/js-this/</url>
+      
+        <content type="html"><![CDATA[<h1 id="javascript-中的this"><a href="#javascript-中的this" class="headerlink" title="javascript 中的this"></a>javascript 中的this</h1><h2 id="this在函数中的绑定有下列几种方式"><a href="#this在函数中的绑定有下列几种方式" class="headerlink" title="this在函数中的绑定有下列几种方式"></a>this在函数中的绑定有下列几种方式</h2><p>  1.隐式绑定<br>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>&#123;<br>    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>);<span class="hljs-comment">//这里this是指向window</span><br>&#125;<br>f();<br></code></pre></td></tr></table></figure><br>2. 通过对象调用函数this隐式绑定的方式</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params"></span>) </span>&#123;<br>  <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>);<span class="hljs-comment">//这里this是person调用的this隐式的绑定person对象</span><br>&#125;<br><span class="hljs-keyword">let</span> person = &#123;<br>    f: f;    <br>&#125;;<br>person.f();<br></code></pre></td></tr></table></figure><ol start="3"><li>通过调用Function.prototype.call()方法显示绑定this<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params"></span>) </span>&#123;<br>      <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>);<span class="hljs-comment">//这里this是指向person,因为通过调用call()方法显示的将f()函数调用时的this指向person</span><br>&#125;<br><span class="hljs-keyword">let</span> person = &#123;<br>&#125;<br>f.call(person);<br></code></pre></td></tr></table></figure>call(this,params)方法的参数是this,params是多个参数.当this为null时this是指向window的</li><li>通过调用apply()方法显示绑定this<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params"></span>) </span>&#123;<br>  <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>);<span class="hljs-comment">//这里this指向person,因为通过apply方法将函数调用时函数中的this显示的绑定为person对象</span><br>&#125;<br><span class="hljs-keyword">let</span> person = &#123;&#125;;<br>f.apply(person)<br></code></pre></td></tr></table></figure>apply(this,[]|arguments)的参数是this的绑定对象,与函数参数,可以是一个数组,也可以是一个类数组对象,比如arguments</li><li>通过bind()方法将this显示的绑定对象<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params"></span>) </span>&#123;<br>  <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">this</span>);<span class="hljs-comment">//这里this指向person</span><br>&#125;<br><span class="hljs-keyword">let</span> person = &#123;&#125;;<br>f.bind(person)();<br></code></pre></td></tr></table></figure>bind(this)的参数是要绑定的this,方法会返回一个新的方法,这个方法的this是person<h2 id="this的一些理解"><a href="#this的一些理解" class="headerlink" title="this的一些理解"></a>this的一些理解</h2></li><li>不要把this与作用域撤上关系 每当你想要把 this 和词法作用域的查找混合使用时，一定要提醒自己，这是无法实现的。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">foo</span>(<span class="hljs-params"></span>) </span>&#123;<br><span class="hljs-keyword">var</span> a = <span class="hljs-number">2</span>;<br><span class="hljs-keyword">this</span>.bar();<br>&#125;<br><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bar</span>(<span class="hljs-params"></span>) </span>&#123;<br><span class="hljs-built_in">console</span>.log( <span class="hljs-keyword">this</span>.a );<br>&#125;<br>foo(); <span class="hljs-comment">// ReferenceError: a is not defined</span><br></code></pre></td></tr></table></figure>在字段代码中我们想要的是打印2,但是这是错误的为什么呢!你想一想当执行foo()时foo中的this是隐式的绑定window,<br>当执行this.bar()时this window调用bar的所以bar中的this也是隐式的绑定window,但执行打印this.a时是在window上<br>寻找a这个属性,当在window上找不到a时对返回undefined;所以会打印undefined;<br>不要把作用域与this撤上关系!!!!<br><img src="https://ae01.alicdn.com/kf/He3effce3d1394be68aa331fd39dd4970r.png" alt="avatar"></li></ol><p><strong>1.3 this到底是什么<br>  排除了一些错误理解之后，我们来看看 this 到底是一种什么样的机制。<br>  之前我们说过 this 是在运行时进行绑定的，并不是在编写时绑定，它的上下文取决于函数调<br>  用时的各种条件。this 的绑定和函数声明的位置没有任何关系，只取决于函数的调用方式。<br>  当一个函数被调用时，会创建一个活动记录（有时候也称为执行上下文）。这个记录会包<br>  含函数在哪里被调用（调用栈）、函数的调用方法、传入的参数等信息。this 就是记录的<br>  其中一个属性，会在函数执行的过程中用到。<br>  在下一章我们会学习如何寻找函数的调用位置，从而判断函数在执行过程中会如何绑定<br>  this。</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> javascript </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> js </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2020/04/11/hello-world/"/>
+      <url>/2020/04/11/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">"My New Post"</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
