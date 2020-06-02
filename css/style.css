@@ -23,10 +23,11 @@ textarea,
 
 body {
   background-color: #FFF;
-  background-image: url("https://ae01.alicdn.com/kf/Hbe3ede7c6386409ab30b9786d2080fe4b.jpg");
+  background-image: url("https://pic.downk.cc/item/5e99a935c2a9a83be5ded419.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-repeat: no-repeat;
   color: #444;
   font-family: "TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -37,7 +38,7 @@ body {
   padding: 0 60px;
   max-width: 1150px;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.94); }
+  background-color: rgba(255, 255, 255, 0.9); }
 
 .content_container {
   padding-right: 50px;
