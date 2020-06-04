@@ -23,7 +23,7 @@ textarea,
 
 body {
   background-color: #FFF;
-  background-image: url("https://pic.downk.cc/item/5e99a935c2a9a83be5ded419.jpg");
+  background-image: url("https://pic.downk.cc/item/5ed906d1c2a9a83be597030e.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -31,14 +31,13 @@ body {
   color: #444;
   font-family: "TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 14px; }
+  -moz-osx-font-smoothing: grayscale; }
 
 .body_container {
-  padding: 0 60px;
-  max-width: 1150px;
+  padding: 0 20px;
+  max-width: 1250px;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.9); }
+  background-color: rgba(255, 255, 255, 0.94); }
 
 .content_container {
   padding-right: 50px;
@@ -390,6 +389,20 @@ div {
 
 /* for archive page ends*/
 /* middle*/
+.body_container .site-name {
+  display: flex; }
+  .body_container .site-name .head-image {
+    flex-basis: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin-right: 20px;
+    background-image: url("https://ae01.alicdn.com/kf/H2fa42ddee4a9404483d936a4d47d0d98b.jpg");
+    background-size: cover;
+    background-position: 4px;
+    background-repeat: no-repeat; }
+  .body_container .site-name .name {
+    align-self: center; }
+
 @media print, screen and (max-width: 48em) {
   .body_container {
     padding: 0 30px; }
