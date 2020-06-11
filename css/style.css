@@ -31,7 +31,8 @@ body {
   color: #444;
   font-family: "TIBch", "Classic Grotesque W01", "Helvetica Neue", Arial, "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", "WenQuanYi Micro Hei", SimSun, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px; }
 
 .body_container {
   padding: 0 20px;
@@ -398,7 +399,7 @@ div {
     margin-right: 20px;
     background-image: url("https://ae01.alicdn.com/kf/H2fa42ddee4a9404483d936a4d47d0d98b.jpg");
     background-size: cover;
-    background-position: 4px;
+    background-position: 0px;
     background-repeat: no-repeat; }
   .body_container .site-name .name {
     align-self: center; }
