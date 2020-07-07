@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="css布局, JavaScript,vue">
+    <meta name="keywords" content="HTTP访问控制(cors), JavaScript,vue">
     <meta name="description" content="学习笔记,生活">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>css布局 | 云中欧龙</title>
+    <title>HTTP访问控制(cors) | 云中欧龙</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -211,12 +211,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://pic.downk.cc/item/5f0326ad14195aa5940d73ed.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://pic.downk.cc/item/5f03dc9b14195aa5945c0496.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">css布局</h1>
+                    <h1 class="description center-align post-title">HTTP访问控制(cors)</h1>
                 </div>
             </div>
         </div>
@@ -333,8 +333,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/css/">
-                                <span class="chip bg-color">css</span>
+                            <a href="/tags/HTTP/">
+                                <span class="chip bg-color">HTTP</span>
                             </a>
                         
                     </div>
@@ -345,8 +345,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/css/" class="post-category">
-                                css
+                            <a href="/categories/HTTP/" class="post-category">
+                                HTTP
                             </a>
                         
                     </div>
@@ -358,7 +358,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-13
+                    2020-07-07
                 </div>
                 
 
@@ -374,23 +374,20 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span></code></pre>
-<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">400</span>px<span class="token punctuation">;</span>
-    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
-    <span class="token property">background-color</span><span class="token punctuation">:</span> lightblue<span class="token punctuation">;</span>
-    <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span> auto<span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<p>这段代码的确会当box居中显示.但是有一个不足的是当游览器的宽度小于400px时<br>浏览器会出现一个<strong>水平的滚动条</strong>!!!<br>怎么办!怎么办!</p>
-<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
-    <span class="token property">max-width</span><span class="token punctuation">:</span> <span class="token number">400</span>px<span class="token punctuation">;</span>
-    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
-    <span class="token property">background-color</span><span class="token punctuation">:</span> lightblue<span class="token punctuation">;</span>
-    <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span> auto<span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-<p><strong>max-width:</strong>可以轻松解决问题,而且他支持傻逼的IE6+,IE7+……哈哈</p>
-<h2 id="display-这个属性有多个值哎-难"><a href="#display-这个属性有多个值哎-难" class="headerlink" title="display 这个属性有多个值哎!难.."></a>display 这个属性有多个值哎!难..</h2><p><strong>display: none</strong><br>元素将不会显示,也不会占用空间.script标签就是它<br>如果元素的display为none,那么改变他的子元素的display属性值,子元素也不会显示,并且在元素上绑定的事件也不会触发;<br><strong>visibility:hidden</strong><br>元素也不会显示,但是会占有元素本来的大小空间;<br>父元素的visibility属性值为hidden,元素在页面上不会显示,但是会保持原有的空间大小,并且如果改变子元素的visibility属性值为<br>visiable那么子元素将会显示,并且在元素上绑定的事件也会触发;</p>
-
+                <h2 id="什么是跨域请求"><a href="#什么是跨域请求" class="headerlink" title="什么是跨域请求?"></a>什么是跨域请求?</h2><blockquote>
+<p>浏览器中有一个同源策略,所谓同源是指 <code>协议</code> <code>域名</code> <code>端口</code> 一样那么就是同源的;<br>非同源的限制: ajax请求对于非同源将会失败,cookie的使用将会受到限制;<br>在使用cookie时如果 域名 端口 相同相同那么可以操作,协议可以不同 HTTP HTTPS</p>
+</blockquote>
+<h5 id="跨域请求在对异步HTTP请求的处理方式"><a href="#跨域请求在对异步HTTP请求的处理方式" class="headerlink" title="跨域请求在对异步HTTP请求的处理方式."></a>跨域请求在对异步HTTP请求的处理方式.</h5><p>如果存在跨域ajax的请求将会被浏览器禁止,有时并不是请求没有发出,而是浏览器发出请求了,服务器也响应请求了,但是浏览器将响应给拦截了,使获取数据的处理函数不能正常获取数据进行处理,从而发生错误.</p>
+<h2 id="跨域请求的解决方式"><a href="#跨域请求的解决方式" class="headerlink" title="跨域请求的解决方式"></a>跨域请求的解决方式</h2><blockquote>
+<p>1.jsonp<br>2.cors (跨域资源共享)<br>3.代理</p>
+</blockquote>
+<h4 id="jsonp方式处理跨域"><a href="#jsonp方式处理跨域" class="headerlink" title="jsonp方式处理跨域"></a>jsonp方式处理跨域</h4><blockquote>
+<p>因为script标签是可以进行跨域请求的,通过src属性可以发出请求;<br>jsonp的方式是在src请求URL的路径后面带上回调的函数如:<br><a href="https://pic.downk.cc/item/5f03e29214195aa5945e3275.jpg" target="_blank" rel="noopener"><img src="https://pic.downk.cc/item/5f03e29214195aa5945e3275.jpg" alt=""></a><br>服务器端在对请求处理后返回对指定的函数进行调用;<br><a href="https://pic.downk.cc/item/5f03e36d14195aa5945e867f.jpg" target="_blank" rel="noopener"><img src="https://pic.downk.cc/item/5f03e36d14195aa5945e867f.jpg" alt=""></a><br>浏览器将会根据响应的回调函数进行函数的调用,从而实现跨域的请求;  </p>
+</blockquote>
+<h5 id="但是jsonp有点问题"><a href="#但是jsonp有点问题" class="headerlink" title="但是jsonp有点问题"></a>但是jsonp有点问题</h5><blockquote>
+<p>1.jsonp只能进行请求方式的GET的请求,对于POST,PUT,DELETE,HEAD都不支持<br>2.jsonp需要后端对响应的格式进行处理 callbackName(args);</p>
+</blockquote>
+<h4 id="cors进行跨域请求处理"><a href="#cors进行跨域请求处理" class="headerlink" title="cors进行跨域请求处理"></a>cors进行跨域请求处理</h4>
             </div>
             <hr/>
 
@@ -415,7 +412,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://oulong6.github.io/2020/04/13/css-a/">https://oulong6.github.io/2020/04/13/css-a/</a>
+                    <a href="https://oulong6.github.io/2020/07/07/http-fang-wen-kong-zhi-cors/">https://oulong6.github.io/2020/07/07/http-fang-wen-kong-zhi-cors/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -453,8 +450,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/css/">
-                                    <span class="chip bg-color">css</span>
+                                <a href="/tags/HTTP/">
+                                    <span class="chip bg-color">HTTP</span>
                                 </a>
                             
                         </div>
@@ -622,47 +619,48 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/04/14/css-a-1/">
+                <a href="/2020/07/07/http-fang-wen-kong-zhi-cors/">
                     <div class="card-image">
                         
-                        <img src="https://pic.downk.cc/item/5f0326ad14195aa5940d73ed.jpg" class="responsive-img ff"  alt="css-a">
+                        <img src="https://pic.downk.cc/item/5f0333fe14195aa594145408.png" class="responsive-img" alt="HTTP访问控制(cors)">
                         
-                        <span class="card-title">css-a</span>
+                        <span class="card-title">HTTP访问控制(cors)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            谈谈html与css的规范1.在一些书上会看到
-&lt;!DOCTYPE html>
-指定HTML的文档类型的HTML5,并且解析模式为标准模式,相对的是混杂模式与接近标准模式,标准模式与非标准模式的解析方式不同,并且css与js的执行有一
+                            什么是跨域请求?
+浏览器中有一个同源策略,所谓同源是指 协议 域名 端口 一样那么就是同源的;非同源的限制: ajax请求对于非同源将会失败,cookie的使用将会受到限制;在使用cookie时如果 域名 端口 相同相同那么可以操作,协议可
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/css/" class="post-category">
-                                    css
+                            <a href="/categories/HTTP/" class="post-category">
+                                    HTTP
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/css/">
-                        <span class="chip bg-color">css</span>
+                    <a href="/tags/HTTP/">
+                        <span class="chip bg-color">HTTP</span>
                     </a>
                     
                 </div>
@@ -676,30 +674,36 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/04/13/js/">
+                <a href="/2020/07/06/http-huan-cun/">
                     <div class="card-image">
                         
-                        <img src="https://pic.downk.cc/item/5f0326ad14195aa5940d73ed.jpg" class="responsive-img" alt="js中的作用域">
+                        <img src="https://pic.downk.cc/item/5f0333fe14195aa594145408.png" class="responsive-img" alt="HTTP 缓存">
                         
-                        <span class="card-title">js中的作用域</span>
+                        <span class="card-title">HTTP 缓存</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            js中的作用域js常被称为动态,解释型语言,但是在你所不知的javascript一书中js其实是编译型语言编译型语言通常包含以下几个步骤:1.代码先进行分词/词法分析2.解析/语法分析(编译器将词法分析的词法单元生成一颗抽象语法树)3.编译
+                            HTTP缓存缓存的优点
+1.加快页面的加载速度,使用户的使用体验更好.2.减少服务器端的压力,减少请求的数量,减少响应的数据量,从而使服务器端的压力减少;
+
+缓存的控制方式
+1.强缓存2.协商缓存
+
+强缓存浏览器上次请求得到的资源还未过期;
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-06
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/javascript/" class="post-category">
-                                    javascript
+                            <a href="/categories/HTTP/" class="post-category">
+                                    HTTP
                                 </a>
                             
                             
@@ -709,8 +713,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/js/">
-                        <span class="chip bg-color">js</span>
+                    <a href="/tags/HTTP/">
+                        <span class="chip bg-color">HTTP</span>
                     </a>
                     
                 </div>

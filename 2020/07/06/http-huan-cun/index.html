@@ -394,7 +394,18 @@
 <h2 id="cache-control"><a href="#cache-control" class="headerlink" title="cache-control"></a>cache-control</h2><h5 id="cache-control-no-store"><a href="#cache-control-no-store" class="headerlink" title="cache-control: no-store"></a>cache-control: no-store</h5><blockquote>
 <p>浏览器不对资源进行缓存,每次发出请求都会向服务器请求资源</p>
 </blockquote>
-<h5 id="cache-control-no-cache"><a href="#cache-control-no-cache" class="headerlink" title="cache-control: no-cache"></a>cache-control: no-cache</h5><p>浏览器会缓存资源,但是每次请求这个资源时都会向服务器发出一个请求,服务器通过浏览器端传递的(if-none-Math,last-modified-since,vary)判断资源是否也更新;如果资源为更新服务器会返回HTTP状态码304</p>
+<h5 id="cache-control-no-cache"><a href="#cache-control-no-cache" class="headerlink" title="cache-control: no-cache"></a>cache-control: no-cache</h5><p> <img src="https://pic.downk.cc/item/5f03d96514195aa5945ae013.jpg" alt=""><br>浏览器会缓存资源,但是每次请求这个资源时都会向服务器发出一个请求,服务器通过浏览器端传递的(if-none-Math,last-modified-since,vary)判断资源是否也更新;如果资源还未更新服务器会返回HTTP状态码304,如果请求的资源也更新服务器响应的状态码是200,并且会响应实体数据,浏览器根据响应的状态码判断是否使用缓存,304使用浏览器端的缓存资源;</p>
+<h5 id="cache-control-public"><a href="#cache-control-public" class="headerlink" title="cache-control: public"></a>cache-control: public</h5><p>代理服务器,CDN可以对资源进行缓存;浏览器也可以对资源进行缓存</p>
+<h5 id="cache-control-private"><a href="#cache-control-private" class="headerlink" title="cache-control: private"></a>cache-control: private</h5><p>代理服务器与CDN不能对资源进行缓存,只有浏览器才能对资源进行缓存;</p>
+<h5 id="cache-control-max-age-10000"><a href="#cache-control-max-age-10000" class="headerlink" title="cache-control: max-age=10000"></a>cache-control: max-age=10000</h5><p><img src="https://pic.downk.cc/item/5f03d9c714195aa5945b05ac.jpg" alt=""><br>表示资源的最大有效时间,max-age是相对请求的date,单位是秒 <code>max-age=0</code> 表示资源的有效期是0秒,下一个请求将会发送到服务器</p>
+<h5 id="cache-control-must-revalidaitl"><a href="#cache-control-must-revalidaitl" class="headerlink" title="cache-control: must-revalidaitl"></a>cache-control: must-revalidaitl</h5><p>使用旧资源时缓存要验证资源是否过期,如果已过期资源将不再使用;</p>
+<h2 id="Expiration-有效期"><a href="#Expiration-有效期" class="headerlink" title="Expiration: 有效期"></a>Expiration: 有效期</h2><blockquote>
+<p>cache-control的优先级高与Expiration<br>缓存失效时间计算公式: expirationTime = responseTime + freshnessLifetime - currentAge</p>
+</blockquote>
+<h2 id="Etag"><a href="#Etag" class="headerlink" title="Etag"></a>Etag</h2><p><img src="https://pic.downk.cc/item/5f03da0014195aa5945b18cc.jpg" alt=""></p>
+<blockquote>
+<p>服务器根据资源的内容生成的一个唯一的标签,为什么要用他呢因为 <code>max-age</code> <code>Expiration</code> <code>last-modified</code> 的精确单位是秒,如果在一秒内改变内容,可能浏览器得到的响应数据不是最新的,而Etag是根据资源内容生成的标识符,如果资源的内容发生改变,浏览器请求的上一次的Etag值将不会与服务器的资源的Etag值相同,从而及时响应最新的资源;<br>更重要的是如果资源的修改时间变更了,而资源的内容没用变化时,Etag值是不会改变的,从而服务器通过请求携带的<code>if-none-Math</code>值来判断如果响应,</p>
+</blockquote>
 
             </div>
             <hr/>
@@ -466,7 +477,7 @@
                     
                 </div>
                 <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
-                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+                    <!-- <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
 <div id="article-share">
 
     
@@ -477,7 +488,7 @@
     
 
 </div>
-
+ -->
                 </div>
             </div>
             
@@ -575,7 +586,7 @@
 </style>
 
 <div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+    <!-- <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a> -->
 
     <!-- Modal Structure -->
     <div id="rewardModal" class="modal">
@@ -627,35 +638,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/07/06/http-huan-cun/">
+                <a href="/2020/07/07/http-fang-wen-kong-zhi-cors/">
                     <div class="card-image">
                         
-                        <img src="https://pic.downk.cc/item/5f0333fe14195aa594145408.png" class="responsive-img" alt="HTTP 缓存">
+                        <img src="https://pic.downk.cc/item/5f0333fe14195aa594145408.png" class="responsive-img ff"  alt="HTTP访问控制(cors)">
                         
-                        <span class="card-title">HTTP 缓存</span>
+                        <span class="card-title">HTTP访问控制(cors)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            HTTP缓存缓存的优点
-1.加快页面的加载速度,使用户的使用体验更好.2.减少服务器端的压力,减少请求的数量,减少响应的数据量,从而使服务器端的压力减少;
-
-缓存的控制方式
-1.强缓存2.协商缓存
-
-强缓存浏览器上次请求得到的资源还未过期;
+                            什么是跨域请求?
+浏览器中有一个同源策略,所谓同源是指 协议 域名 端口 一样那么就是同源的;非同源的限制: ajax请求对于非同源将会失败,cookie的使用将会受到限制;在使用cookie时如果 域名 端口 相同相同那么可以操作,协议可
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-06
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-07
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -668,7 +673,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     

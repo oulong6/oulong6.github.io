@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>HTTP访问控制(cors)</title>
+      <link href="/2020/07/07/http-fang-wen-kong-zhi-cors/"/>
+      <url>/2020/07/07/http-fang-wen-kong-zhi-cors/</url>
+      
+        <content type="html"><![CDATA[<h2 id="什么是跨域请求"><a href="#什么是跨域请求" class="headerlink" title="什么是跨域请求?"></a>什么是跨域请求?</h2><blockquote><p>浏览器中有一个同源策略,所谓同源是指 <code>协议</code> <code>域名</code> <code>端口</code> 一样那么就是同源的;<br>非同源的限制: ajax请求对于非同源将会失败,cookie的使用将会受到限制;<br>在使用cookie时如果 域名 端口 相同相同那么可以操作,协议可以不同 HTTP HTTPS</p></blockquote><h5 id="跨域请求在对异步HTTP请求的处理方式"><a href="#跨域请求在对异步HTTP请求的处理方式" class="headerlink" title="跨域请求在对异步HTTP请求的处理方式."></a>跨域请求在对异步HTTP请求的处理方式.</h5><p>如果存在跨域ajax的请求将会被浏览器禁止,有时并不是请求没有发出,而是浏览器发出请求了,服务器也响应请求了,但是浏览器将响应给拦截了,使获取数据的处理函数不能正常获取数据进行处理,从而发生错误.</p><h2 id="跨域请求的解决方式"><a href="#跨域请求的解决方式" class="headerlink" title="跨域请求的解决方式"></a>跨域请求的解决方式</h2><blockquote><p>1.jsonp<br>2.cors (跨域资源共享)<br>3.代理</p></blockquote><h4 id="jsonp方式处理跨域"><a href="#jsonp方式处理跨域" class="headerlink" title="jsonp方式处理跨域"></a>jsonp方式处理跨域</h4><blockquote><p>因为script标签是可以进行跨域请求的,通过src属性可以发出请求;<br>jsonp的方式是在src请求URL的路径后面带上回调的函数如:<br><a href="https://pic.downk.cc/item/5f03e29214195aa5945e3275.jpg" target="_blank" rel="noopener"><img src="https://pic.downk.cc/item/5f03e29214195aa5945e3275.jpg" alt=""></a><br>服务器端在对请求处理后返回对指定的函数进行调用;<br><a href="https://pic.downk.cc/item/5f03e36d14195aa5945e867f.jpg" target="_blank" rel="noopener"><img src="https://pic.downk.cc/item/5f03e36d14195aa5945e867f.jpg" alt=""></a><br>浏览器将会根据响应的回调函数进行函数的调用,从而实现跨域的请求;  </p></blockquote><h5 id="但是jsonp有点问题"><a href="#但是jsonp有点问题" class="headerlink" title="但是jsonp有点问题"></a>但是jsonp有点问题</h5><blockquote><p>1.jsonp只能进行请求方式的GET的请求,对于POST,PUT,DELETE,HEAD都不支持<br>2.jsonp需要后端对响应的格式进行处理 callbackName(args);</p></blockquote><h4 id="cors进行跨域请求处理"><a href="#cors进行跨域请求处理" class="headerlink" title="cors进行跨域请求处理"></a>cors进行跨域请求处理</h4>]]></content>
+      
+      
+      <categories>
+          
+          <category> HTTP </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTTP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>HTTP 缓存</title>
       <link href="/2020/07/06/http-huan-cun/"/>
       <url>/2020/07/06/http-huan-cun/</url>
       
-        <content type="html"><![CDATA[<h1 id="HTTP缓存"><a href="#HTTP缓存" class="headerlink" title="HTTP缓存"></a>HTTP缓存</h1><h2 id="缓存的优点"><a href="#缓存的优点" class="headerlink" title="缓存的优点"></a>缓存的优点</h2><blockquote><p>1.加快页面的加载速度,使用户的使用体验更好.<br>2.减少服务器端的压力,减少请求的数量,减少响应的数据量,从而使服务器端的压力减少;</p></blockquote><h2 id="缓存的控制方式"><a href="#缓存的控制方式" class="headerlink" title="缓存的控制方式"></a>缓存的控制方式</h2><blockquote><p>1.强缓存<br>2.协商缓存</p></blockquote><h4 id="强缓存"><a href="#强缓存" class="headerlink" title="强缓存"></a>强缓存</h4><pre class=" language-text"><code class="language-text">浏览器上次请求得到的资源还未过期;如(expiration)的有效期为过期,(cache-control: max-age)的最大时间;这些都能确保资源是新鲜的.从而浏览器将不会发出请求,而是使用浏览器上传请求缓存的资源;</code></pre><h4 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a>协商缓存</h4><pre class=" language-text"><code class="language-text">浏览器会先向服务器发出一个请求,并且会携带上次服务器响应的请求头信息如:1.last-modified //资源最后的修改时间2.Etag //服务器根据资源的内容生成的唯一标识字符串浏览器向服务器请求会携带的请求头:1.if-modified-since //资源最后的修改时间,上次服务器响应的last-modified2.if-none-Math //上次服务器响应头的Etag3.vary //HTTP 响应头决定了对于后续的请求头</code></pre><h2 id="cache-control"><a href="#cache-control" class="headerlink" title="cache-control"></a>cache-control</h2><h5 id="cache-control-no-store"><a href="#cache-control-no-store" class="headerlink" title="cache-control: no-store"></a>cache-control: no-store</h5><blockquote><p>浏览器不对资源进行缓存,每次发出请求都会向服务器请求资源</p></blockquote><h5 id="cache-control-no-cache"><a href="#cache-control-no-cache" class="headerlink" title="cache-control: no-cache"></a>cache-control: no-cache</h5><p>浏览器会缓存资源,但是每次请求这个资源时都会向服务器发出一个请求,服务器通过浏览器端传递的(if-none-Math,last-modified-since,vary)判断资源是否也更新;如果资源为更新服务器会返回HTTP状态码304</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="HTTP缓存"><a href="#HTTP缓存" class="headerlink" title="HTTP缓存"></a>HTTP缓存</h1><h2 id="缓存的优点"><a href="#缓存的优点" class="headerlink" title="缓存的优点"></a>缓存的优点</h2><blockquote><p>1.加快页面的加载速度,使用户的使用体验更好.<br>2.减少服务器端的压力,减少请求的数量,减少响应的数据量,从而使服务器端的压力减少;</p></blockquote><h2 id="缓存的控制方式"><a href="#缓存的控制方式" class="headerlink" title="缓存的控制方式"></a>缓存的控制方式</h2><blockquote><p>1.强缓存<br>2.协商缓存</p></blockquote><h4 id="强缓存"><a href="#强缓存" class="headerlink" title="强缓存"></a>强缓存</h4><pre class=" language-text"><code class="language-text">浏览器上次请求得到的资源还未过期;如(expiration)的有效期为过期,(cache-control: max-age)的最大时间;这些都能确保资源是新鲜的.从而浏览器将不会发出请求,而是使用浏览器上传请求缓存的资源;</code></pre><h4 id="协商缓存"><a href="#协商缓存" class="headerlink" title="协商缓存"></a>协商缓存</h4><pre class=" language-text"><code class="language-text">浏览器会先向服务器发出一个请求,并且会携带上次服务器响应的请求头信息如:1.last-modified //资源最后的修改时间2.Etag //服务器根据资源的内容生成的唯一标识字符串浏览器向服务器请求会携带的请求头:1.if-modified-since //资源最后的修改时间,上次服务器响应的last-modified2.if-none-Math //上次服务器响应头的Etag3.vary //HTTP 响应头决定了对于后续的请求头</code></pre><h2 id="cache-control"><a href="#cache-control" class="headerlink" title="cache-control"></a>cache-control</h2><h5 id="cache-control-no-store"><a href="#cache-control-no-store" class="headerlink" title="cache-control: no-store"></a>cache-control: no-store</h5><blockquote><p>浏览器不对资源进行缓存,每次发出请求都会向服务器请求资源</p></blockquote><h5 id="cache-control-no-cache"><a href="#cache-control-no-cache" class="headerlink" title="cache-control: no-cache"></a>cache-control: no-cache</h5><p> <img src="https://pic.downk.cc/item/5f03d96514195aa5945ae013.jpg" alt=""><br>浏览器会缓存资源,但是每次请求这个资源时都会向服务器发出一个请求,服务器通过浏览器端传递的(if-none-Math,last-modified-since,vary)判断资源是否也更新;如果资源还未更新服务器会返回HTTP状态码304,如果请求的资源也更新服务器响应的状态码是200,并且会响应实体数据,浏览器根据响应的状态码判断是否使用缓存,304使用浏览器端的缓存资源;</p><h5 id="cache-control-public"><a href="#cache-control-public" class="headerlink" title="cache-control: public"></a>cache-control: public</h5><p>代理服务器,CDN可以对资源进行缓存;浏览器也可以对资源进行缓存</p><h5 id="cache-control-private"><a href="#cache-control-private" class="headerlink" title="cache-control: private"></a>cache-control: private</h5><p>代理服务器与CDN不能对资源进行缓存,只有浏览器才能对资源进行缓存;</p><h5 id="cache-control-max-age-10000"><a href="#cache-control-max-age-10000" class="headerlink" title="cache-control: max-age=10000"></a>cache-control: max-age=10000</h5><p><img src="https://pic.downk.cc/item/5f03d9c714195aa5945b05ac.jpg" alt=""><br>表示资源的最大有效时间,max-age是相对请求的date,单位是秒 <code>max-age=0</code> 表示资源的有效期是0秒,下一个请求将会发送到服务器</p><h5 id="cache-control-must-revalidaitl"><a href="#cache-control-must-revalidaitl" class="headerlink" title="cache-control: must-revalidaitl"></a>cache-control: must-revalidaitl</h5><p>使用旧资源时缓存要验证资源是否过期,如果已过期资源将不再使用;</p><h2 id="Expiration-有效期"><a href="#Expiration-有效期" class="headerlink" title="Expiration: 有效期"></a>Expiration: 有效期</h2><blockquote><p>cache-control的优先级高与Expiration<br>缓存失效时间计算公式: expirationTime = responseTime + freshnessLifetime - currentAge</p></blockquote><h2 id="Etag"><a href="#Etag" class="headerlink" title="Etag"></a>Etag</h2><p><img src="https://pic.downk.cc/item/5f03da0014195aa5945b18cc.jpg" alt=""></p><blockquote><p>服务器根据资源的内容生成的一个唯一的标签,为什么要用他呢因为 <code>max-age</code> <code>Expiration</code> <code>last-modified</code> 的精确单位是秒,如果在一秒内改变内容,可能浏览器得到的响应数据不是最新的,而Etag是根据资源内容生成的标识符,如果资源的内容发生改变,浏览器请求的上一次的Etag值将不会与服务器的资源的Etag值相同,从而及时响应最新的资源;<br>更重要的是如果资源的修改时间变更了,而资源的内容没用变化时,Etag值是不会改变的,从而服务器通过请求携带的<code>if-none-Math</code>值来判断如果响应,</p></blockquote>]]></content>
       
       
       <categories>
