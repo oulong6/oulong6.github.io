@@ -387,7 +387,14 @@
 <h5 id="但是jsonp有点问题"><a href="#但是jsonp有点问题" class="headerlink" title="但是jsonp有点问题"></a>但是jsonp有点问题</h5><blockquote>
 <p>1.jsonp只能进行请求方式的GET的请求,对于POST,PUT,DELETE,HEAD都不支持<br>2.jsonp需要后端对响应的格式进行处理 callbackName(args);</p>
 </blockquote>
-<h4 id="cors进行跨域请求处理"><a href="#cors进行跨域请求处理" class="headerlink" title="cors进行跨域请求处理"></a>cors进行跨域请求处理</h4>
+<h4 id="cors进行跨域请求处理"><a href="#cors进行跨域请求处理" class="headerlink" title="cors进行跨域请求处理"></a>cors进行跨域请求处理</h4><h5 id="简单请求（不会触-CORS-预检请求）"><a href="#简单请求（不会触-CORS-预检请求）" class="headerlink" title="简单请求（不会触 CORS 预检请求）"></a>简单请求（不会触 <code>CORS</code> 预检请求）</h5><blockquote>
+<p>请求方式是 <code>GET</code> <code>POST</code> <code>HEAD</code>之一<br>并且<code>Content-Type</code>的值是下面三者之一：<br><code>text/plain</code><br><code>muiltion/form-data</code><br><code>application/x-www-form-urlencoded</code><br>不允许请求外加的字段</p>
+</blockquote>
+<h5 id="复杂请求"><a href="#复杂请求" class="headerlink" title="复杂请求"></a>复杂请求</h5><blockquote>
+<p>对于复杂的请求浏览器会触发CORS预检请求，就是会先向服务器端发送一个请求方式是<code>options</code>的请求，<code>options</code>是向服务器获取当前URL支持的请求方式与可以改变的请求头字段，是否可以使用Cookie。<br><a href="https://pic.downk.cc/item/5f0562a714195aa594f5f597.jpg" target="_blank" rel="noopener"><img src="https://pic.downk.cc/item/5f0562a714195aa594f5f597.jpg" alt=""></a><br>浏览器发送<code>options</code>请求给服务器，并且请求中告诉服务器将要使用的请求方式，请求头改变的字段等；<br>服务器的响应：<br><a href="https://pic.downk.cc/item/5f05631c14195aa594f62460.jpg" target="_blank" rel="noopener"><img src="https://pic.downk.cc/item/5f05631c14195aa594f62460.jpg" alt=""></a><br>1.表示浏览器可以携带cookie.<br>2.浏览器可以改变的头部字段<br>3.允许的请求方式<br>4.允许的请求域名  </p>
+</blockquote>
+<h6 id="当服务器端允许携带cookie时-access-control-allow-origin-必须是一个域名不能是"><a href="#当服务器端允许携带cookie时-access-control-allow-origin-必须是一个域名不能是" class="headerlink" title="当服务器端允许携带cookie时 access-control-allow-origin:必须是一个域名不能是*"></a>当服务器端允许携带cookie时 <code>access-control-allow-origin:</code>必须是一个域名不能是<code>*</code></h6><p>当浏览器可以成功接收options的响应时并且状态码是<code>200</code>，浏览器将会正式发送对应URL请求，</p>
+
             </div>
             <hr/>
 

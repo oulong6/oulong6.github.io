@@ -251,19 +251,10 @@
                 
                 
                 
-                <a href="/categories/HTTP/" title="HTTP: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F9EBEA;">HTTP
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/categories/javascript/" title="javascript: 7">
                     <span class="chip center-align waves-effect waves-light
                              chip-active "
-                            style="background-color: #F5EEF8;">javascript
+                            style="background-color: #F9EBEA;">javascript
                         <span class="tag-length">7</span>
                     </span>
                 </a>
@@ -272,7 +263,16 @@
                 <a href="/categories/css/" title="css: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #D5F5E3;">css
+                            style="background-color: #F5EEF8;">css
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/HTTP/" title="HTTP: 2">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #D5F5E3;">HTTP
                         <span class="tag-length">2</span>
                     </span>
                 </a>
@@ -554,23 +554,28 @@ let [x,y,z] = [1,
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2020/04/13/js/">
+                    <a href="/2020/05/12/js-this/">
                         <div class="card-image tag-image">
                             
-                            <img src="https://pic.downk.cc/item/5f0326ad14195aa5940d73ed.jpg" class="responsive-img" alt="js中的作用域">
+                            <img src="https://pic.downk.cc/item/5f0326ad14195aa5940d73ed.jpg" class="responsive-img" alt="js中的this">
                             
-                            <span class="card-title">js中的作用域</span>
+                            <span class="card-title">js中的this</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                js中的作用域js常被称为动态,解释型语言,但是在你所不知的javascript一书中js其实是编译型语言编译型语言通常包含以下几个步骤:1.代码先进行分词/词法分析2.解析/语法分析(编译器将词法分析的词法单元生成一颗抽象语法树)3.编译
+                                javascript 中的this
+在全局作用域中this是指向window。函数中的this是指向是看函数是如何被调用的。
+
+this在函数中的绑定有下列几种方式  1.隐式绑定
+
+如果函数是独立调用的，那么在非严格模式下this指向wi
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-13
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-12
                             </span>
                             <span class="publish-author">
                                 
@@ -599,28 +604,23 @@ let [x,y,z] = [1,
             
             <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2020/04/12/js-this/">
+                    <a href="/2020/04/13/js/">
                         <div class="card-image tag-image">
                             
-                            <img src="https://pic.downk.cc/item/5f0326ad14195aa5940d73ed.jpg" class="responsive-img" alt="js中的this">
+                            <img src="https://pic.downk.cc/item/5f0326ad14195aa5940d73ed.jpg" class="responsive-img" alt="js中的作用域">
                             
-                            <span class="card-title">js中的this</span>
+                            <span class="card-title">js中的作用域</span>
                         </div>
                     </a>
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                javascript 中的this
-在全局作用域中this是指向window。函数中的this是指向是看函数是如何被调用的。
-
-this在函数中的绑定有下列几种方式  1.隐式绑定
-
-如果函数是独立调用的，那么在非严格模式下this指向wi
+                                js中的作用域js常被称为动态,解释型语言,但是在你所不知的javascript一书中js其实是编译型语言编译型语言通常包含以下几个步骤:1.代码先进行分词/词法分析2.解析/语法分析(编译器将词法分析的词法单元生成一颗抽象语法树)3.编译
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-13
                             </span>
                             <span class="publish-author">
                                 
