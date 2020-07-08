@@ -263,13 +263,12 @@
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                javascript 中的thisthis在函数中的绑定有下列几种方式  1.隐式绑定
-function(){
-    console.log(this);//这里this是指向window
-}
-f();
+                                javascript 中的this
+在全局作用域中this是指向window。函数中的this是指向是看函数是如何被调用的。
 
-通过对象调用函数this隐式绑定
+this在函数中的绑定有下列几种方式  1.隐式绑定
+
+如果函数是独立调用的，那么在非严格模式下this指向wi
                             
                         </div>
                         <div class="publish-info">
@@ -447,7 +446,7 @@ f();
             <br>
             
         </div>
-        <div class="col s12 m4 l4 social-link social-statis">
+        <!-- <div class="col s12 m4 l4 social-link social-statis">
     <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
@@ -478,7 +477,7 @@ f();
         <i class="fas fa-rss"></i>
     </a>
 
-</div>
+</div> -->
     </div>
 </footer>
 
