@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="css浮动, JavaScript,vue">
+    <meta name="keywords" content="js比较运算符, JavaScript,vue">
     <meta name="description" content="学习笔记,生活">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>css浮动 | 云中欧龙</title>
+    <title>js比较运算符 | 云中欧龙</title>
     <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -211,12 +211,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://pic.downk.cc/item/5f06875214195aa594584d95.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://pic.downk.cc/item/5f02f7fa14195aa594f5aa44.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">css浮动</h1>
+                    <h1 class="description center-align post-title">js比较运算符</h1>
                 </div>
             </div>
         </div>
@@ -333,8 +333,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/css/">
-                                <span class="chip bg-color">css</span>
+                            <a href="/tags/js/">
+                                <span class="chip bg-color">js</span>
                             </a>
                         
                     </div>
@@ -345,8 +345,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/css/" class="post-category">
-                                css
+                            <a href="/categories/javascript/" class="post-category">
+                                javascript
                             </a>
                         
                     </div>
@@ -358,7 +358,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-07-09
+                    2020-07-10
                 </div>
                 
 
@@ -374,61 +374,44 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="css浮动及清除浮动"><a href="#css浮动及清除浮动" class="headerlink" title="css浮动及清除浮动"></a>css浮动及清除浮动</h2><p>浮动元素是通过设置<code>float</code>属性为<code>left</code>或者<code>right</code>变成浮动元素；浮动元素是脱离文档流的，所以元素在文档流中的限制被打破，比如内联元素可以设置宽高；浮动元素的父元素的高度将会不包含浮动子元素的高度。</p>
-<h3 id="浮动元素的浮动步骤"><a href="#浮动元素的浮动步骤" class="headerlink" title="浮动元素的浮动步骤"></a>浮动元素的浮动步骤</h3><pre class=" language-css"><code class="language-css">    &lt;div class=<span class="token string">"box"</span>>
-        &lt;div class=<span class="token string">"item"</span> style=<span class="token string">"background-color: pink"</span>> item<span class="token number">1</span>&lt;/div>
-        &lt;div class=<span class="token string">"item"</span> style=<span class="token string">"background-color: #4b9149"</span>>item<span class="token number">2</span>&lt;/div>
-        &lt;div class=<span class="token string">"item"</span> style=<span class="token string">"background-color: #d6d44f"</span>>item<span class="token number">3</span>&lt;/div>
-        &lt;div class=<span class="token string">"item"</span> style=<span class="token string">"background-color: #cb0746"</span>>item<span class="token number">4</span>&lt;/div>
-    &lt;/div>
-    <span class="token comment" spellcheck="true">/* css */</span>
-     <span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
-            <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">400</span>px<span class="token punctuation">;</span>
-            <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">500</span>px<span class="token punctuation">;</span>
-            <span class="token property">background-color</span><span class="token punctuation">:</span> gray<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token selector"><span class="token class">.item</span> </span><span class="token punctuation">{</span>
-            <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">50</span>px<span class="token punctuation">;</span>
-            <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">50</span>px<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span></code></pre>
-<p><a href="https://pic.downk.cc/item/5f068d3c14195aa5945a0fd5.jpg" target="_blank" rel="noopener"><img src="https://pic.downk.cc/item/5f068d3c14195aa5945a0fd5.jpg" alt=""></a><br>在没有给item元素设置浮动时，因为它们是块级元素是独占一行，一个接一个的排列</p>
-<h4 id="设置第一个子元素向left浮动"><a href="#设置第一个子元素向left浮动" class="headerlink" title="设置第一个子元素向left浮动"></a>设置第一个子元素向left浮动</h4><pre class=" language-css"><code class="language-css">    <span class="token selector"><span class="token class">.item</span><span class="token pseudo-class">:nth-of-type(1)</span></span><span class="token punctuation">{</span>
-        <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token selector"><span class="token class">.item</span><span class="token pseudo-class">:nth-of-type(2)</span></span><span class="token punctuation">{</span>
-        <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">80</span>px<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span></code></pre>
-<p><a href="https://pic.downk.cc/item/5f068e4114195aa5945a5a30.jpg" target="_blank" rel="noopener"><img src="https://pic.downk.cc/item/5f068e4114195aa5945a5a30.jpg" alt=""></a><br>浮动过程抽象的描述：</p>
-<blockquote>
-<p>item1在布局时，因为item1设置了<code>float：left；</code>在文档流中并不存在，它属于浮动流；所以文档流的布局方式不适合它，后面的元素，是属于文档流的，它们会一个及一个的排列；item1元素不在文档流中，所以后面的元素会占据原来item1元素的位置。图中的item的右边是不是有一个绿色的元素，因为item1是浮动元素了，不再文档流里，所以后面的元素会向上移动，占据原来item1的位置，item1元素下面的就是item2<br><img style="height: 200px;" src="https://pic.downk.cc/item/5f0733be14195aa5948d6e55.gif"></p>
+                <h1 id="js中的比较运算符"><a href="#js中的比较运算符" class="headerlink" title="js中的比较运算符"></a>js中的比较运算符</h1><h2 id="比较运算符分两种"><a href="#比较运算符分两种" class="headerlink" title="比较运算符分两种"></a>比较运算符分两种</h2><blockquote>
+<p>1.相等比较<br>2.非相等比较<br><img src="https://pic.downk.cc/item/5f0879e714195aa594ebed95.jpg" alt=""></p>
 </blockquote>
-<pre class=" language-css"><code class="language-css">      <span class="token selector"><span class="token class">.item</span><span class="token pseudo-class">:nth-of-type(1)</span></span><span class="token punctuation">{</span>
-            <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token selector"><span class="token class">.item</span><span class="token pseudo-class">:nth-of-type(2)</span></span><span class="token punctuation">{</span>
-            <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token selector"><span class="token class">.item</span><span class="token pseudo-class">:nth-of-type(3)</span></span><span class="token punctuation">{</span>
-            <span class="token property">float</span><span class="token punctuation">:</span> right<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token selector"><span class="token class">.item</span><span class="token pseudo-class">:nth-of-type(4)</span></span><span class="token punctuation">{</span>
-            <span class="token property">float</span><span class="token punctuation">:</span> right<span class="token punctuation">;</span>
-            <span class="token property">clear</span><span class="token punctuation">:</span>
-
-        <span class="token punctuation">}</span></code></pre>
-<img src="https://pic.downk.cc/item/5f0736ee14195aa5948e7879.gif" style="height: 300px;">
-
-<blockquote>
-<p>给元素设置左浮动或者右浮动时，元素会向左或者向右一个接一个的排列。类似于内联元素的排列方式；如果空间不够元素的大小，元素与换行直到空间足够。</p>
+<h2 id="相等比较"><a href="#相等比较" class="headerlink" title="相等比较"></a>相等比较</h2><blockquote>
+<p>相等比较又分相等与严格相等</p>
 </blockquote>
-<h2 id="清除浮动"><a href="#清除浮动" class="headerlink" title="清除浮动"></a>清除浮动</h2><blockquote>
-<p>清除浮动的属性是<code>clear</code><br>1.<code>clear: left;</code> //左边不能有浮动元素，有换行<br>2.<code>clear: right;</code>//右边不能有浮动元素，有换行<br>3.<code>clear: both;</code>//左右两边边不能有浮动元素，有换行<br>如：在给元素添加<code>clear: left;</code>属性是，是要求元素的左边是不能有浮动的，如果该元素的左边有浮动元素那么该元素将会换行。<code>cleat</code>并不是清除浮动元素，而是要求设置这个属性的元素的右边或者右边不可以出现浮动元素，如果有浮动元素，那么当前元素会换行显示。浮动元素是按照顺序一个一个的布局的，当前浮动元素的后面浮动元素并不会影响当前的浮动元素；</p>
+<h3 id="相等"><a href="#相等" class="headerlink" title="相等"></a>相等</h3><blockquote>
+<p>两个数相等比较,如: <code>2==2</code> , <code>2==3</code> , <code>&#39;2&#39;==2</code>, <code>{} == [object Object]</code><br>如果两个数类型相同，那么将会使用严格相等进行比较（下文）；如果两个数类型不相同，将会将他们转成数值进行比较，如<code>2==&#39;2&#39;</code>,因为两边类型不相同，会将右边的字符串<code>&#39;2&#39;</code>转成数值<code>Number(&#39;2&#39;)</code>返回数值<code>2</code>;所以他们是相等的，再如：<code>false == &#39;&#39;</code>因为他们类型不同，会将他们都转成数值<code>Number(false)</code>返回<code>0</code>,<code>Number(&#39;&#39;)</code>返回<code>0</code>所以他们是相等的；如果其中的一个是引用类型的，那么会引用类型转成基本类型，会调用对象的<code>valueOf()</code>方法，如果返回基本类型就用它，如果返回的是一个对象，那么会调用对象的<code>toString()</code>的方法如果返回的是基本类型值，就用它，否则如果返回的是一个对象那么将会报错；如果对象转变成基本类型成功后，那么将会使用之前的比较方式进行比较；</p>
 </blockquote>
-<h4 id="清除浮动的抽象动画"><a href="#清除浮动的抽象动画" class="headerlink" title="清除浮动的抽象动画"></a>清除浮动的抽象动画</h4><img src="https://pic.downk.cc/item/5f0739c614195aa5948f6f8e.gif">
-
-<blockquote>
-<p>清除浮动就是让设置<code>clear</code>属性的元素，如果他的左边或者右边有浮动元素那么该元素就会向下移动，直到没有浮动元素为止，从而使父元素的高度撑开了。</p>
+<h3 id="严格相等"><a href="#严格相等" class="headerlink" title="严格相等"></a>严格相等</h3><blockquote>
+<p>严格相等与相等比较的区别；严格相等不会发生类型转换；也就是如果两边的类型不同，那么将会直接返回<code>false</code>;如果两边的类型相同并且都是基本类型，将会比较他们的值是否相等；如：<code>2 === &#39;2&#39;</code> 返回 <code>false</code>因为两边类型不同，严格相等直接返回<code>false</code>；如：<code>2 === 3</code>两边的类型是相同的，并且他们都是基本类型的值，所以会比较他们的值是否相等。如果两边的值都是对象那么将会比较他们的引用地址是否相同，如果是相同的引用地址，那么返回<code>true</code>否则返回<code>false</code>.如：</p>
 </blockquote>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> b <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a <span class="token operator">===</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//false;因为两边都是引用类型，比较的是他们的引用地址，然而他们都是独立的对象，</span>
+<span class="token comment" spellcheck="true">//地址是不同的，所以返回的是false</span></code></pre>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> b <span class="token operator">=</span> a<span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a <span class="token operator">===</span> b<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// true；引用地址是相同的，所以返回true</span></code></pre>
+<h3 id="不相同"><a href="#不相同" class="headerlink" title="不相同"></a>不相同</h3><blockquote>
+<p><code>!=</code>不相同是相等的值取反后的值，相对两个值进行相等比较，得到值后对值进行取反。</p>
+</blockquote>
+<h3 id="严格不相同"><a href="#严格不相同" class="headerlink" title="严格不相同"></a>严格不相同</h3><blockquote>
+<p><code>!==</code>严格不相同与不相等是类似的道理。先进行严格相同比较，然后对返回的值进行取反。</p>
+</blockquote>
+<h2 id="非相同比较"><a href="#非相同比较" class="headerlink" title="非相同比较"></a>非相同比较</h2><blockquote>
+<p>非相同比较，就是 <code>&gt;</code> , <code>&lt;</code>, <code>&gt;=</code>, <code>&lt;=</code>;<br>对于非相等比较，如果两边的类型都是<code>String</code>类型，那么将会通过<code>unicode</code>编码字符集进行码点的比较；如：<code>&#39;a&#39; &gt; &#39;b&#39;</code>,因为两边都是<code>String</code>类型的值；所以将会使用<code>Unicode</code>码点进行比较，因为<code>a</code>是<code>65</code>,而<code>b</code>是<code>66</code>所以是返回<code>false</code>；如果同位置处的编码是相同的相会比较后面的字符编码，只要一处不同，就会得出结果，不会再进行比较；<br>如果两边不是<code>string</code>类型的值，那么将会将他们转变成数字类型的值进行比较，如 <code>&#39;2&#39;</code>会转变成<code>2</code>；对于引用类型会先调用<code>valueOf()</code>方法如果返回的不是基本类型值，会调用<code>toString()</code>，如果返回值都不是基本类型值，而是一个引用类型的值，将会报错；</p>
+</blockquote>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><blockquote>
+<p>null , undefined 与 其他类型进行相等比较时，都会返回<code>false</code>；</p>
+</blockquote>
+<pre class=" language-javascript"><code class="language-javascript"> <span class="token string">'ddd'</span> <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//false</span>
+  <span class="token number">0</span> <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//false</span>
+ <span class="token string">'ddd'</span> <span class="token operator">==</span> undefined <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//false</span>
+  <span class="token number">0</span> <span class="token operator">==</span> <span class="token keyword">null</span> <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//false</span>
+  <span class="token boolean">true</span> <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//false</span>
+  <span class="token boolean">true</span> <span class="token operator">==</span> undefined<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//false</span>
+  <span class="token keyword">null</span> <span class="token operator">==</span> undefined <span class="token comment" spellcheck="true">//true</span></code></pre>
 
             </div>
             <hr/>
@@ -454,7 +437,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://oulong6.github.io/2020/07/09/css-fu-dong/">https://oulong6.github.io/2020/07/09/css-fu-dong/</a>
+                    <a href="https://oulong6.github.io/2020/07/10/js-bi-jiao-yun-suan-fu/">https://oulong6.github.io/2020/07/10/js-bi-jiao-yun-suan-fu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -492,8 +475,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/css/">
-                                    <span class="chip bg-color">css</span>
+                                <a href="/tags/js/">
+                                    <span class="chip bg-color">js</span>
                                 </a>
                             
                         </div>
@@ -661,14 +644,15 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/07/10/js-bi-jiao-yun-suan-fu/">
                     <div class="card-image">
                         
-                        <img src="https://pic.downk.cc/item/5f02c03d14195aa594dfac9a.png" class="responsive-img ff"  alt="js比较运算符">
+                        <img src="https://pic.downk.cc/item/5f02c03d14195aa594dfac9a.png" class="responsive-img" alt="js比较运算符">
                         
                         <span class="card-title">js比较运算符</span>
                     </div>
@@ -687,9 +671,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -702,6 +686,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -720,31 +705,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/07/07/http-fang-wen-kong-zhi-cors/">
+                <a href="/2020/07/09/css-fu-dong/">
                     <div class="card-image">
                         
-                        <img src="https://pic.downk.cc/item/5f0333fe14195aa594145408.png" class="responsive-img" alt="HTTP访问控制(cors)">
+                        <img src="https://pic.downk.cc/item/5f0687c514195aa594587407.jpg" class="responsive-img" alt="css浮动">
                         
-                        <span class="card-title">HTTP访问控制(cors)</span>
+                        <span class="card-title">css浮动</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            什么是跨域请求?
-浏览器中有一个同源策略,所谓同源是指 协议 域名 端口 一样那么就是同源的;非同源的限制: ajax请求对于非同源将会失败,cookie的使用将会受到限制;在使用cookie时如果 域名 端口 相同相同那么可以操作,协议可
+                            css浮动及清除浮动浮动元素是通过设置float属性为left或者right变成浮动元素；浮动元素是脱离文档流的，所以元素在文档流中的限制被打破，比如内联元素可以设置宽高；浮动元素的父元素的高度将会不包含浮动子元素的高度。
+浮动元素的浮动步
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/HTTP/" class="post-category">
-                                    HTTP
+                            <a href="/categories/css/" class="post-category">
+                                    css
                                 </a>
                             
                             
@@ -754,8 +739,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/HTTP/">
-                        <span class="chip bg-color">HTTP</span>
+                    <a href="/tags/css/">
+                        <span class="chip bg-color">css</span>
                     </a>
                     
                 </div>
